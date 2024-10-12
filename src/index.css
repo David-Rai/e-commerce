@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+
+.a{
+    @apply py-4 text-black
+}
+
+@tailwind utilities;
