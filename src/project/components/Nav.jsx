@@ -24,9 +24,6 @@ const Nav = () => {
         <NavLink to="/" className="a" onClick={handleMenu}>
           Home
         </NavLink>
-        <NavLink to="/product" className="a" onClick={handleMenu}>
-          Product
-        </NavLink>
         <NavLink to="/about" className="a" onClick={handleMenu}>
           About us
         </NavLink>

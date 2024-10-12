@@ -1,9 +1,10 @@
 import React from 'react'
+import image from './image.jpg'
 
 const Slider = () => {
   return (
-    <div className='h-[35vh] w-full bg-purple-400'>
-      this is slider bro
+    <div className='h-[40vh] w-full'>
+      <img src={image} className="h-full w-full" />
     </div>
   )
 }

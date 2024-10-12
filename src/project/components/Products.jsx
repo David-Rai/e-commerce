@@ -2,10 +2,13 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProduct } from "../projectStore/ProductSlice";
 import { addProduct } from "../projectStore/ProductSlice";
+import { useNavigate } from "react-router-dom";
+
 
 const Products = () => {
   const products = useSelector((state) => state.product);
   const dispatch = useDispatch();
+  const navigate=useNavigate()
 
   //fetching data on component mount
   useEffect(() => {
@@ -16,6 +19,10 @@ const Products = () => {
   const addTocart=(product)=>{
     dispatch(addProduct(product))
   }
+   //showing the detail of product
+const handleDetail=(product)=>{
+navigate('/details',{state:product})
+}
 
            //html and css or simply jsx
   return (
@@ -27,6 +34,7 @@ const Products = () => {
           products.data.map((product, index) => {
             return (
               <div
+              onClick={() => handleDetail(product)}
                 key={index}
                 className="h-[40vh] w-[40%] bg-white shadow-lg mt-2 px-2 py-4 
                 rounded-md flex flex-col items-start justify-evenly"
@@ -35,7 +43,7 @@ const Products = () => {
                 <img src={product.image} className="h-full w-[60%]" />
                 </div>
                 <h1 className="capitalize font-semibold">{product.category}</h1>
-                <h1>{product.price}$</h1>
+                <h1 className="text-priceColor">{product.price}$</h1>
                 <button
                 onClick={()=> addTocart(product)}
                   className="bg-btn text-white w-[120px]

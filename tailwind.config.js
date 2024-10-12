@@ -8,7 +8,8 @@ export default {
     extend: {
       colors:{
         btn:"#001F3F",
-        bgColor:"#F5F5F5"
+        bgColor:"#F5F5F5",
+        priceColor:"#c2410c"
       }
     },
   },

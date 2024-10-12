@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import Nav from './Nav'
+import Nav from './Nav.jsx'
 import { useDispatch,useSelector } from 'react-redux'
 import { MdDeleteOutline } from "react-icons/md";
 import {removeProduct} from '../projectStore/ProductSlice.jsx'
 
-const Card = () => {
+const Cart = () => {
 const dispatch=useDispatch()
 const cartData = useSelector((state) => state.product.cartData);
 
@@ -43,4 +43,4 @@ dispatch(removeProduct(index))
   )
 }
 
-export default Card
+export default Cart
