@@ -16,10 +16,16 @@ const Nav = () => {
 
   return (
     <nav className="h-[10%] w-full flex items-center justify-between px-4">
-      <RiMenu2Line className="text-2xl" onClick={handleMenu} />
+      <RiMenu2Line className="text-2xl lg:hidden" onClick={handleMenu} />
       <ul
         ref={ulRef}
-        className="w-full h-screen bg-[#F7E7D8] absolute left-0 flex-col bottom-0 hidden items-center justify-center"
+        className="w-full h-screen bg-[#F7E7D8] 
+        absolute left-0 flex-col
+         bottom-0 hidden items-center justify-center
+         lg:static lg:flex lg:flex-row lg:h-[10%]
+         lg:justify-between lg:w-[10%] 
+         lg:bg-transparent
+         "
       >
         <NavLink to="/" className="a" onClick={handleMenu}>
           Home
@@ -27,7 +33,7 @@ const Nav = () => {
         <NavLink to="/about" className="a" onClick={handleMenu}>
           About us
         </NavLink>
-        <FaXmark className="text-2xl absolute top-4 right-4" onClick={handleMenu} />
+        <FaXmark className="text-2xl absolute top-4 right-4 lg:hidden" onClick={handleMenu} />
       </ul>
 
       <div className=" icons  flex items-center justify-between">

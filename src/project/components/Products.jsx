@@ -37,7 +37,10 @@ navigate('/details',{state:product})
               onClick={() => handleDetail(product)}
                 key={index}
                 className="h-[40vh] w-[40%] bg-white shadow-lg mt-2 px-2 py-4 
-                rounded-md flex flex-col items-start justify-evenly"
+                rounded-md flex flex-col items-start justify-evenly
+                sm:w-[30%]
+                lg:w-[20%]
+                "
               >
                 <div className="image h-[40%] w-full flex items-center justify-center">
                 <img src={product.image} className="h-full w-[60%]" />
